@@ -1,13 +1,167 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* GLOBAL SETUP: Scroll bilisa gochuu fi view dhiphina dhabamsiisuu */
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-y: auto !important;
+    /* Sarara kana ijaan eeggadhu, scroll akka eeyyamamu taasisa */
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #030712;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #f3f4f6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* MASTER GLOBAL CONTAINER LAYER */
+.portfolio-app {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CYBER LIGHT EMISSION SYSTEM (Ifa duubaa) */
+.bg-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-animation span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(6, 182, 212, 0.03);
+    border-radius: 50%;
+    filter: blur(140px);
+    animation: float 16s infinite alternate ease-in-out;
+}
+
+.bg-animation span:nth-child(1) {
+    top: -5%;
+    left: -5%;
+    animation-delay: 0s;
+    background: rgba(6, 182, 212, 0.04);
+}
+
+.bg-animation span:nth-child(2) {
+    top: 35%;
+    right: -10%;
+    animation-delay: 3s;
+    background: rgba(59, 130, 246, 0.03);
+}
+
+.bg-animation span:nth-child(3) {
+    bottom: 5%;
+    left: -5%;
+    animation-delay: 6s;
+}
+
+.bg-animation span:nth-child(4) {
+    top: 15%;
+    right: 25%;
+    animation-delay: 1.5s;
+}
+
+.bg-animation span:nth-child(5) {
+    bottom: 25%;
+    right: 5%;
+    animation-delay: 4.5s;
+    background: rgba(20, 184, 166, 0.02);
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px) rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: translateY(-60px) rotate(10deg) scale(1.1);
+    }
+}
+
+/* GLOSSY SCROLL-TRACKED HEADER OVERLAY */
+.portfolio-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 10%;
+    position: sticky;
+    top: 0;
+    background: rgba(3, 7, 18, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.shortcut-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #22d3ee;
+    transition: all 0.3s ease;
+}
+
+.shortcut-link:hover::after {
+    width: 100%;
+}
+
+/* STRUCTURAL INTERACTION KEYFRAMES */
+.animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CUSTOM SLEEK SCROLLBAR (Sarara bifa simat qabu) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #374151;
 }
