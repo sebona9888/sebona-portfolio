@@ -23,7 +23,7 @@ const Projects = () => {
                         </div>
                         <div>
                             <h3 className="text-xl md:text-2xl font-extrabold text-white tracking-tight">
-                                prime Burger
+                                beebboo Burger
                             </h3>
                             <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mt-1">
                                 E-Commerce Enterprise System
@@ -58,7 +58,7 @@ const Projects = () => {
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="https://prime-burger.vercel.app"
+                            href="https://beebboo-burger.vercel.app"
                             target="_blank"
                             rel="noreferrer"
                             className="px-6 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-gray-950 font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-cyan-500/20 text-xs md:text-sm tracking-wide flex items-center gap-2"
@@ -66,7 +66,7 @@ const Projects = () => {
                             🌐 Launch Live System
                         </a>
                         <a
-                            href="https://github.com/sebona9888/prime-burger"
+                            href="https://github.com/sebona9888/beebboo-burger"
                             target="_blank"
                             rel="noreferrer"
                             className="px-6 py-3.5 bg-transparent border border-gray-800 hover:border-gray-600 text-gray-300 hover:text-white font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 text-xs md:text-sm tracking-wide flex items-center gap-2"
